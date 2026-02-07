@@ -23,7 +23,7 @@ class Settings(BaseSettings):
     # Pinecone Configuration
     PINECONE_API_KEY: Optional[str] = None  # Required for vector storage
     PINECONE_ENVIRONMENT: str = "us-east-1-aws"
-    PINECONE_INDEX_NAME: str = "rag-cache-docsqa"
+    PINECONE_INDEX_NAME: str = "rag-documents"
 
     # Supabase/PostgreSQL Configuration
     DATABASE_URL: Optional[str] = None  # Required for Text-to-SQL
@@ -72,7 +72,7 @@ class Settings(BaseSettings):
         return "data/cached_chunks"
 
     # S3 Storage Configuration (for Lambda deployment)
-    S3_CACHE_BUCKET: str = "rag-cache-docsqa"
+    S3_CACHE_BUCKET: str = "msaifee-rag-cache-bucket"
     AWS_REGION: str = "us-east-1"
     # AWS credentials from environment or IAM role (recommended for Lambda)
     # AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY are read automatically by boto3

@@ -104,7 +104,7 @@ RUN dnf install -y [30+ packages...] # Takes 20-25 minutes
 
 **After:**
 ```dockerfile
-FROM 685057748560.dkr.ecr.us-east-1.amazonaws.com/lambda-python-deps:3.12
+FROM 958614257254.dkr.ecr.us-east-1.amazonaws.com/lambda-python-deps:3.12
 # All dependencies already installed - instant!
 ```
 
@@ -115,7 +115,7 @@ FROM 685057748560.dkr.ecr.us-east-1.amazonaws.com/lambda-python-deps:3.12
 
 **Base Image URI:**
 ```
-685057748560.dkr.ecr.us-east-1.amazonaws.com/lambda-python-deps:3.12
+958614257254.dkr.ecr.us-east-1.amazonaws.com/lambda-python-deps:3.12
 ```
 
 **Update Frequency:** Only rebuild base image when system dependencies change (rarely)
@@ -322,7 +322,7 @@ Net benefit:       +$21.20/month
 
 ### AWS Resources Created
 1. ✅ ECR repository: `lambda-python-deps` (with lifecycle policy)
-2. ✅ Base image: `685057748560.dkr.ecr.us-east-1.amazonaws.com/lambda-python-deps:3.12`
+2. ✅ Base image: `958614257254.dkr.ecr.us-east-1.amazonaws.com/lambda-python-deps:3.12`
 
 ---
 
@@ -426,7 +426,7 @@ git push origin main
    - Go to: https://github.com/your-repo/actions
    - Verify "Build, tag, and push image" step shows:
      ```
-     CACHED [stage-3 1/1] FROM 685057748560.dkr.ecr.us-east-1.amazonaws.com/lambda-python-deps:3.12
+     CACHED [stage-3 1/1] FROM 958614257254.dkr.ecr.us-east-1.amazonaws.com/lambda-python-deps:3.12
      ```
    - Total deployment time should be 5-7 minutes
 
@@ -536,7 +536,7 @@ git tag v1.0.0 && git push origin v1.0.0
 
 2. Check base image includes all required packages:
    ```bash
-   docker run --rm 685057748560.dkr.ecr.us-east-1.amazonaws.com/lambda-python-deps:3.12 \
+   docker run --rm 958614257254.dkr.ecr.us-east-1.amazonaws.com/lambda-python-deps:3.12 \
      rpm -qa | grep -E "poppler|mesa|cairo"
    ```
 
@@ -589,8 +589,8 @@ rm -f Dockerfile.lambda.base build-base-image.sh
 - [UV Package Installer](https://github.com/astral-sh/uv)
 
 ### AWS Console Links
-- [ECR Repository (Base Images)](https://console.aws.amazon.com/ecr/repositories/private/685057748560/lambda-python-deps?region=us-east-1)
-- [ECR Repository (Application)](https://console.aws.amazon.com/ecr/repositories/private/685057748560/rag-text-to-sql-server?region=us-east-1)
+- [ECR Repository (Base Images)](https://console.aws.amazon.com/ecr/repositories/private/958614257254/lambda-python-deps?region=us-east-1)
+- [ECR Repository (Application)](https://console.aws.amazon.com/ecr/repositories/private/958614257254/rag-text-to-sql-server?region=us-east-1)
 - [Lambda Function](https://console.aws.amazon.com/lambda/home?region=us-east-1#/functions/rag-text-to-sql-server)
 - [GitHub Actions Workflows](https://github.com/your-repo/actions)
 

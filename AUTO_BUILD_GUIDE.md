@@ -202,7 +202,7 @@ git push origin main
 
 # Project B (same AWS account)
 # Update Dockerfile to use same base image
-FROM 685057748560.dkr.ecr.us-east-1.amazonaws.com/lambda-python-deps:3.12
+FROM 958614257254.dkr.ecr.us-east-1.amazonaws.com/lambda-python-deps:3.12
 
 git push origin main
 # Reuses existing base image (~5-7 min)
