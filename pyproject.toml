@@ -10,7 +10,7 @@ readme = "README.md"
 license = "MIT"
 requires-python = ">=3.12"
 authors = [
-    { name = "Sourangshu Pal", email = "paulbindass@gmail.com" }
+    { name = "Murtuza Saifee", email = "murtuzasaifee23@gmail.com" }
 ]
 keywords = [
     "rag",
